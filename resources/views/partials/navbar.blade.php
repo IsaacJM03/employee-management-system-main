@@ -183,12 +183,12 @@
           <img src="{{ asset('img/avatars/dummy.png') }}" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">{{ Auth::user()->name }}</span>
         </a>
         <div class="dropdown-menu dropdown-menu-end">
-          <a class="dropdown-item" href="javascript:void(0)"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+          <!-- <a class="dropdown-item" href="javascript:void(0)"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
           <a class="dropdown-item" href="javascript:void(0)"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="javascript:void(0)"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
           <a class="dropdown-item" href="javascript:void(0)"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-          <div class="dropdown-divider"></div>
+          <div class="dropdown-divider"></div> -->
           {{-- <a class="dropdown-item" href="javascript:void(0)">Log out</a> --}}
           <!-- Authentication -->
           <form method="POST" action="{{ route('logout') }}">

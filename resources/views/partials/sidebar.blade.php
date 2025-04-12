@@ -128,12 +128,12 @@
       {{-- @endif
 
       @if (Auth::check() && (Auth::user()->role->slug === 'super-admin' || Auth::user()->role->slug === 'administrator' || Auth::user()->role->slug === 'hr-manager')) --}}
-        <li class="sidebar-item">
+        <!-- <li class="sidebar-item">
         <a class="sidebar-link" href="{{ Auth::user()->role->slug === 'super-admin' ? route('leaves.create') : (Auth::user()->role->slug === 'administrator' ? route('admin.leaves.create') : route('hr.leaves.create') ) }}">
           <i class="fa-solid fa-file-pen"></i>
-          <span class="align-middle">{{ __('Registration') }}</span>
+         <span class="align-middle">{{ __('Registration') }}</span>
         </a>
-        </li>
+        </li> -->
       @endif
           
       @if (Auth::check() && (Auth::user()->role->slug === 'super-admin' || Auth::user()->role->slug === 'administrator' || Auth::user()->role->slug === 'payroll-manager'))
@@ -150,11 +150,11 @@
       {{-- @endif
 
       @if (Auth::check() && (Auth::user()->role->slug === 'super-admin' || Auth::user()->role->slug === 'administrator' || Auth::user()->role->slug === 'payroll-manager')) --}}
-        <li class="sidebar-item">
+        <!-- <li class="sidebar-item">
         <a class="sidebar-link" href="{{ route('payroll.create') }}">
           <i class="fa-solid fa-file-export"></i>
           <span class="align-middle">{{ __('Generate Payroll') }}</span>
-        </a>
+        </a> -->
         </li>
       {{-- @endif
 

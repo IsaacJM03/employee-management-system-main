@@ -48,7 +48,7 @@ Route::middleware('superadmin')->prefix('super')->group( function () {
     // Route::resource('attendance', AttendanceController::class);
     Route::resource('leaves', LeaveController::class);
     // Route::resource('salary', SalaryController::class);
-    Route::resource('allowance',AllowanceController::class);
+    // Route::resource('allowance',AllowanceController::class);
     Route::resource('payroll',PayrollController::class);
     Route::resource('roles',RoleController::class );
     Route::resource('user',UserController::class );

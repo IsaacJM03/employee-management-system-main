@@ -29,7 +29,7 @@
               {{-- <label for="year">Select Year:</label> --}}
               <select name="year" class="form-select" id="year">
                 <option value="">{{ __('Choose Year') }}</option>
-                <option value="2023">{{ __('2023') }}</option>
+                <option value="">{{ now()->year }}</option>
               </select>
             </div>
             <div class="col-3">
@@ -57,7 +57,7 @@
       </form>
       </div>
       <div class="table-responsive">
-        @isset($selectedYear, $selectedMonth)
+        <!-- @isset($selectedYear, $selectedMonth) -->
           <h2>Salary Sheet for {{ $selectedMonth }}/{{ $selectedYear }}</h2>
           <table class="table table-hover my-0 table-bordered">
             <thead>

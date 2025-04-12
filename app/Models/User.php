@@ -45,4 +45,5 @@ class User extends Authenticatable
     public function role(): BelongsTo {
         return $this->belongsTo(Role::class);
     }
+    // map user tole to employee and other roles when creating user
 }

@@ -25,8 +25,8 @@ class ScheduleController extends Controller
     public function create()
     {
         //
-       
-        return view('admin.schedule.create' );
+        $schedules = Schedule::all();
+        return view('admin.schedule.create', compact('schedules'));;
     }
 
     /**
@@ -36,7 +36,7 @@ class ScheduleController extends Controller
     {
         //
         Schedule::create($request->all());
-        return back()->with('success', 'user crated successfully');
+        return back()->with('success', 'user created successfully');
     }
 
     /**

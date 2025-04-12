@@ -52,9 +52,9 @@
                 </select>
               </div>
               <div class="col-6">
-                <label for="status">Leave Type</label>
+                <label for="status">Leave Status</label>
                 <select name="status" id="status" class="form-control" required>
-                  <option value="1">Apprived</option>
+                  <option value="1">Approved</option>
                   <option value="0">Rejected</option>
                 </select>
               </div>
