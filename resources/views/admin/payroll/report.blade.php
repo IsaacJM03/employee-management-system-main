@@ -57,7 +57,7 @@
       </form>
       </div>
       <div class="table-responsive">
-        @isset($selectedYear, $selectedMonth)
+        <!-- @isset($selectedYear, $selectedMonth) -->
           <h2>Salary Sheet for {{ $selectedMonth }}/{{ $selectedYear }}</h2>
           <table class="table table-hover my-0 table-bordered">
             <thead>

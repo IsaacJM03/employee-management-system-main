@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+        // TODO: map user tole to employee and other roles when creating user
+
     /**
      * Display a listing of the resource.
      */
@@ -40,7 +42,7 @@ class UserController extends Controller
     //         $employee->salary()->save($salary);
     //      }
         User::create($request->all());
-        return back()->with('success', 'user crated successfully');
+        return back()->with('success', 'user created successfully');
     }
 
     /**
