@@ -6,7 +6,6 @@ The Employee Management System is a comprehensive solution designed to streamlin
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Live Preview](#live-preview)
 - [User Interface](#user-interface)
 - [Technologies Used](#technologies-used)
 - [Usage](#usage)
@@ -31,10 +30,6 @@ The Employee Management System is a comprehensive solution designed to streamlin
 
 The Employee Management System is a comprehensive and user-friendly application designed to streamline and simplify the process of managing employees within an organization. This system provides an efficient and organized way to handle various employee-related tasks, from onboarding and attendance tracking to performance evaluation and payroll management.
 
-
-## Live Preview
-
-To preview this project please visit https://hrms.shawon-khan.com/
 
 
 ## User Interface
@@ -65,7 +60,7 @@ To preview this project please visit https://hrms.shawon-khan.com/
 
 ## Technologies Used
 
-The following technologies have been used in the development of Employee Management System (HRMS):
+The following technologies have been used in the development of Employee Management System (E-HRMS):
 
 - **[Laravel](https://laravel.com/)** : A popular PHP web application framework known for its elegant syntax and feature-rich ecosystem.
 - **[Laravel Blade](https://laravel.com/)** : The templating engine provided by Laravel for designing and rendering views.
@@ -186,33 +181,9 @@ Congratulations! Employee Management System should now be up and running at `htt
 
 
 ## AdminKit Admin Panel
-Our Employee Management System incorporates the AdminKit Admin Panel to streamline administrative tasks. AdminKit is a flexible and modern admin dashboard template built with Bootstrap and other front-end technologies. Its customizable components and UI elements enable efficient management of various HRMS functionalities.
+Our Employee Management System incorporates the AdminKit Admin Panel to streamline administrative tasks. AdminKit is a flexible and modern admin dashboard template built with Bootstrap and other front-end technologies. Its customizable components and UI elements enable efficient management of various E-HRMS functionalities.
 
 Get it from here: **[AdminKit](https://adminkit.io/)**
-
-
-## Contributors
-
-##### Mohona Akter
-- GitHub: [MOHONA678](https://github.com/MOHONA678/)
-- Contributions: Multirole Authentication with Persmission, User Management, Attendance System.
-
-##### Mst.Shorifa Akter
-- GitHub: [Shorifa1234](https://github.com/Shorifa1234)
-- Contributions: Staff Management, Leave Management, Payroll system.
-
-##### Muhammad Nasir Uddin Khan Shawon
-- GitHub: [shawonk007](https://github.com/shawonk007)
-- Contributions: Database Design & Management.
-
-
-## Want to Contribute?
-We welcome contributions from the community! If you'd like to contribute to the Employee Management System project, please follow these steps:
-
-01. Fork the repository.
-02. Create a new branch for your feature/bug fix.
-03. Make your changes and test thoroughly.
-04. Submit a pull request explaining your changes and the problem they solve.
 
 
 ## License
