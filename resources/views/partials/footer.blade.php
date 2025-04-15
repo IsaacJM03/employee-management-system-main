@@ -3,7 +3,7 @@
     <div class="row text-muted">
       <div class="col-6 text-start">
         <p class="mb-0">
-          <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>E-HRMS</strong></a> &copy;
+          <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>E-RMS</strong></a> &copy;
           <script>
             document.write(new Date().getFullYear())
           </script>
