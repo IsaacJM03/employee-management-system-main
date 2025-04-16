@@ -9,6 +9,47 @@
 @endsection
 
 @section('content')
+<ul class="navbar-nav navbar-align">
+    <li class="nav-item dropdown">
+      <a class="nav-icon nav-link dropdown-toggle" href="javascript:void(0)" id="itemsDropdown" data-bs-toggle="dropdown">
+        <i class="align-middle" data-feather="plus"></i>
+        <span class="align-middle" style="font-size: 0.85rem;">New Items</span>
+      </a>
+      <div class="dropdown-menu py-0" aria-labelledby="itemsDropdown">
+        <div class="dropdown-menu-header">{{ __('Add New Opion') }}</div>
+        <div class="list-group">
+          <!-- <a href="{{ route('department.create') }}" class="list-group-item">
+            <i class="fas fa-plus align-middle"></i>
+            <span class="text-dark ps-2">{{ __('Department') }}</span>
+          </a>
+          <a href="{{ route('designation.create') }}" class="list-group-item">
+            <i class="fas fa-plus align-middle"></i>
+            <span class="text-dark ps-2">{{ __('Designation') }}</span>
+          </a>
+          <a href="{{ route('employee.create') }}" class="list-group-item">
+            <i class="fas fa-plus align-middle"></i>
+            <span class="text-dark ps-2">{{ __('Employee') }}</span>
+          </a>
+          <a href="{{ route('attendance.create') }}" class="list-group-item">
+            <i class="fas fa-plus align-middle"></i>
+            <span class="text-dark ps-2">{{ __('Attendance') }}</span>
+          </a> -->
+          <a href="{{ route('leaves.create') }}" class="list-group-item">
+            <i class="fas fa-plus align-middle"></i>
+            <span class="text-dark ps-2">{{ __('Leave') }}</span>
+          </a>
+          <!-- <a href="{{ route('payroll.create') }}" class="list-group-item">
+            <i class="fas fa-plus align-middle"></i>
+            <span class="text-dark ps-2">{{ __('Payroll') }}</span>
+          </a>
+          <a href="{{ route('user.create') }}" class="list-group-item">
+            <i class="fas fa-plus align-middle"></i>
+            <span class="text-dark ps-2">{{ __('User') }}</span>
+          </a> -->
+        </div>
+      </div>
+    </li>
+  </ul>
   <section class="row">
 	<div class="col-sm-12">
 	  <div class="row">
@@ -44,7 +85,7 @@
 				</div>
 				<div class="col-auto">
 				  <div class="stat text-primary">
-                    <i class="fa-solid fa-person-walking-arrow-right"></i>
+					<i class="fa-solid fa-users-gear"></i>
 				  </div>
 				</div>
 			  </div>
@@ -54,7 +95,7 @@
 			</div>
 		  </div>
 		</div>
-		<div class="col-sm-24">
+		<div class="col-sm-6">
 		  <div class="card">
 			<div class="card-body">
 			  <div class="row">
