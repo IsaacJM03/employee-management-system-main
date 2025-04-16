@@ -10,7 +10,7 @@
 
 @section('content')
   <section class="row">
-	<div class="col-sm-6">
+	<div class="col-sm-12">
 	  <div class="row">
 		<div class="col-sm-6">
 		  <div class="card">
@@ -44,7 +44,7 @@
 				</div>
 				<div class="col-auto">
 				  <div class="stat text-primary">
-					<i class="fa-solid fa-users-gear"></i>
+                    <i class="fa-solid fa-person-walking-arrow-right"></i>
 				  </div>
 				</div>
 			  </div>
@@ -54,13 +54,13 @@
 			</div>
 		  </div>
 		</div>
-		<div class="col-sm-6">
-		  <!-- <div class="card">
+		<div class="col-sm-24">
+		  <div class="card">
 			<div class="card-body">
 			  <div class="row">
 				<div class="col mt-0">
-				  <a href="{{ route('employee.index') }}">
-					<h5 class="card-title">{{ __('Employees') }}</h5>
+				  <a href="{{ route('attendance.index') }}">
+					<h5 class="card-title">{{ __('Attendance') }}</h5>
 				  </a>
 				</div>
 				<div class="col-auto">
@@ -70,10 +70,10 @@
 				</div>
 			  </div>
 			  <h1 class="mt-3 mb-3">
-				{{ App\Models\Employee::where('status', 1)->count(); }}
+				{{ App\Models\Attendance::where('employee_id', Auth::user()->id)->count(); }}
 			  </h1>
 			</div>
-		  </div> -->
+		  </div>
 		</div>
 		<div class="col-sm-6">
 		  <!-- <div class="card">

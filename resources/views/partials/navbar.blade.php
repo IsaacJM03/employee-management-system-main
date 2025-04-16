@@ -3,7 +3,7 @@
     <i class="hamburger align-self-center"></i>
   </a>
 
-  <ul class="navbar-nav navbar-align">
+  <!-- <ul class="navbar-nav navbar-align">
     <li class="nav-item dropdown">
       <a class="nav-icon nav-link dropdown-toggle" href="javascript:void(0)" id="itemsDropdown" data-bs-toggle="dropdown">
         <i class="align-middle" data-feather="plus"></i>
@@ -43,7 +43,7 @@
         </div>
       </div>
     </li>
-  </ul>
+  </ul> -->
 
   <div class="navbar-collapse collapse">
     <ul class="navbar-nav navbar-align">
