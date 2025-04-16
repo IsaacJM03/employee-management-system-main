@@ -19,7 +19,7 @@
     <div class="col-12">
       <div class="card flex-fill">
         <div class="card-header">              
-          <h5 class="card-title mb-0">{{ __('Payroll of the month August') }}</h5>
+          <h5 class="card-title mb-0">{{ __('Payroll of the month') }}</h5>
         </div>
         <div class="table-responsive">
           <table class="table table-hover my-0 table-bordered table-sm">
@@ -29,18 +29,18 @@
                 <th scope="col">{{ __('Designation') }}</th>
                 <th scope="col">{{ __('Basic Salary') }}</th>
                 <th scope="col">{{ __('House Rent') }}</th>
-                <th scope="col">{{ __('Medical') }}</th>
+                <!-- <th scope="col">{{ __('Medical') }}</th>
                 <th scope="col">{{ __('Transport') }}</th>
                 <th scope="col">{{ __('Phone Bill') }}</th>
                 <th scope="col">{{ __('Internet') }}</th>
                 <th scope="col">{{ __('Special') }}</th>
-                <th scope="col">{{ __('Bonus') }}</th>
+                <th scope="col">{{ __('Bonus') }}</th> -->
                 <th scope="col">{{ __('Present') }}</th>
                 <th scope="col">{{ __('Absent') }}</th>
                 <th scope="col">{{ __('Gross Salary') }}</th>
                 {{-- <th scope="col">Overtime</th> --}}
                 <th scope="col">{{ __('Provident Fund') }}</th>
-                <th scope="col">{{ __('Advanced') }}</th>
+                <!-- <th scope="col">{{ __('Advanced') }}</th> -->
                 <th scope="col">{{ __('Tax') }}</th>
                 <th scope="col">{{ __('Life insurance') }} </th>
                 <th scope="col">{{ __('Health insurance') }}</th>
@@ -70,7 +70,7 @@
                     <td width="">
                       <input type="number" name="payroll[{{ $employee->id }}][house_rent]" class="form-control rent"  id="" value="{{ isset($employee->salary->house_rent) ? $employee->salary->house_rent : 0 }}" style="width: 100px" >
                     </td>
-                    <td width="">
+                    <!-- <td width="">
                       <input type="number" name="payroll[{{ $employee->id }}][medical]" class="form-control medical" id="" value="{{ isset($employee->salary->medical) ? $employee->salary->medical : 0 }}" style="width: 100px" >
                     </td>
                     <td width="">
@@ -87,7 +87,7 @@
                     </td>
                     <td width="">
                         <input type="number" name="payroll[{{ $employee->id }}][bonus]" class="form-control bonus" id="" value="{{ isset($employee->salary->bonus) ? $employee->salary->bonus : 0 }}" style="width: 100px" >
-                    </td>
+                    </td> -->
                     <td width="">
                       @php
                         $present = App\Models\Attendance::where('employee_id', $employee->id)->where('status', 1)->count()
@@ -110,9 +110,9 @@
                     <td width="">
                         <input type="number" name="payroll[{{ $employee->id }}][provident_fund]" class="form-control pf" id="" value="{{ isset($employee->salary->provident_fund) ? $employee->salary->provident_fund : 0 }}" style="width: 100px">
                     </td>
-                    <td width="">
+                    <!-- <td width="">
                       <input type="number" name="payroll[{{ $employee->id }}][advanced]" class="form-control advance" id="" value="0" style="width: 100px" >
-                    </td>
+                    </td> -->
                     <td width="">
                       <input type="number" name="payroll[{{ $employee->id }}][income_tax]" class="form-control tax" id="" value="{{ isset($employee->salary->income_tax) ? $employee->salary->income_tax : 0 }}" style="width: 100px" >
                     </td>

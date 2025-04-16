@@ -29,7 +29,8 @@
               {{-- <label for="year">Select Year:</label> --}}
               <select name="year" class="form-select" id="year">
                 <option value="">{{ __('Choose Year') }}</option>
-                <option value="">{{ now()->year }}</option>
+                <option value="">{{ 2025 }}</option>
+                <!-- <option value="">{{ now()->year }}</option> -->
               </select>
             </div>
             <div class="col-3">
@@ -66,16 +67,16 @@
                 <th scope="col">{{ __('Employee Position') }}</th>
                 <th scope="col">Basic Salary</th>
                 <th scope="col">House rent</th>
-                <th scope="col">Medical Allowance</th>
-                <th scope="col">Transport Allowance</th>
-                <th scope="col">special Allowance</th>
-                <th scope="col">Bonus</th>
+                <!-- <th scope="col">Medical Allowance</th> -->
+                <!-- <th scope="col">Transport Allowance</th> -->
+                <!-- <th scope="col">special Allowance</th>
+                <th scope="col">Bonus</th> -->
                 <th scope="col">Present</th>
                 <th scope="col">Absent</th>
                 <th scope="col">Gross Salary</th>
                 {{-- <th scope="col">Overtime</th> --}}
                 <th scope="col">Provident Fund</th>
-                <th scope="col">Advanced</th>
+                <!-- <th scope="col">Advanced</th> -->
                 <th scope="col">Tax</th>
                 <th scope="col">Life insurance </th>
                 <th scope="col">Health insurance</th>
@@ -89,8 +90,21 @@
                       <td>{{ $data->employee->firstname }}</td>
                       <td>{{ $data->basic }}</td>
                       <td>{{ $data->house_rent }}</td>
-                      <td>{{ $data->medical }}</td>
-                      <!-- Add more fields as needed -->
+                      <!-- <td>{{ $data->medical }}</td> -->
+                      <!-- <td>{{ $data->transport }}</td>
+                      <td>{{ $data->special }}</td>
+                      <td>{{ $data->bonus }}</td> -->
+                      <td>{{ $data->present }}</td>
+                      <td>{{ $data->absent }}</td>
+                      <td>{{ $data->gross }}</td>
+                      <!-- <td>{{ $data->overtime }}</td> -->
+                      <td>{{ $data->provident_fund }}</td>
+                      <!-- <td>{{ $data->advanced }}</td> -->
+                      <td>{{ $data->tax }}</td>
+                      <td>{{ $data->life_insurance }}</td>
+                      <td>{{ $data->health_insurance }}</td>
+                      <td>{{ $data->deduction }}</td>
+                      <td>{{ $data->net_salary }}</td>
                   </tr>
               @endforeach
                 </tbody>

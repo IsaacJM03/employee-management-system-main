@@ -16,9 +16,10 @@
     </style>
     <style>
       #welcome {
-        background: url('{{ asset('img/photos/Untitled-1.png') }}');
-        background-size: cover;
-        background-position: fixed;
+        background: url('{{ asset('img/photos/erms.png') }}');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
       }
     </style>
   </head>

@@ -133,11 +133,11 @@ class PayrollController extends Controller
                             // $data->medical = $payrollFields['medical'];
                             $data->basic = $payrollData['basic'];
                             $data->house_rent = $payrollData['house_rent'];
-                            $data->medical = $payrollData['medical'];
-                            $data->transport = $payrollData['transport'];
-                            $data->phone_bill = $payrollData['phone_bill'];
-                            $data->internet_bill = $payrollData['internet_bill'];
-                            $data->special = $payrollData['special'];
+                            // $data->medical = $payrollData['medical'];
+                            // $data->transport = $payrollData['transport'];
+                            // $data->phone_bill = $payrollData['phone_bill'];
+                            // $data->internet_bill = $payrollData['internet_bill'];
+                            // $data->special = $payrollData['special'];
                             // $data->bonus = $payrollData['bonus'];
                             $data->days_present = $payrollData['days_present'];
                             $data->days_absent = $payrollData['days_absent'];
@@ -168,7 +168,16 @@ class PayrollController extends Controller
         $months = [
             1 => 'January',
             2 => 'February',
-            // ... Define months for all 12 months
+            3 => 'March',
+            4 => 'April',
+            5 => 'May',
+            6 => 'June',
+            7 => 'July',
+            8 => 'August',
+            9 => 'September',
+            10 => 'October',
+            11 => 'November',
+            12 => 'December',
         ];
 
         return view('admin.payroll.report', compact('employees', 'months'));
@@ -176,15 +185,16 @@ class PayrollController extends Controller
 
     public function generateReport(Request $request)
     {
-        $selectedYear = $request->input('year');
+        $selectedYear = $request->input('year') ? $year = 2025 : date('Y');
+        // dd($selectedYear);
         $selectedMonth = $request->input('month');
         $employees = Employee::all();
         $salaryData = [];
 
         if ($selectedYear && $selectedMonth) {
             $salaryData = Payroll::whereIn('employee_id', $employees->pluck('id'))
-                ->whereYear('year', $selectedYear)
-                ->whereMonth('month', $selectedMonth)
+                ->where('year', $selectedYear)
+                ->where('month', $selectedMonth)
                 ->get();
         }
 
