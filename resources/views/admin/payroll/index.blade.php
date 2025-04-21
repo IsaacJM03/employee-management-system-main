@@ -169,8 +169,8 @@
           //   (basic.val() / 30) * absent;
           // }
 
-          var grossSalary = basic + rent + medical + transport + mobile + internet + special + bonus;
-          var deductSalary = pf + advance + tax + life + health;
+          var grossSalary = basic + rent;
+          var deductSalary = tax + life + health;
           var netSalary = grossSalary - deductSalary;
           
           $employee.find(".gross").val(grossSalary.toFixed(2));
