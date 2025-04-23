@@ -47,7 +47,7 @@
                   <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('employee.edit', $employee->id) : (Auth::user()->role->slug === 'administrator' ? route('admin.employee.edit', $employee->id) : route('hr.employee.edit', $employee->id) ) }}" class="btn btn-info btn-sm">
                     <i class="fas fa-edit"></i>
                   </a>
-                  <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('employee.show', $employee->id) : (Auth::user()->role->slug === 'administrator' ? route('admin.employee.show', $employee->id) : route('hr.employee.show', $employee->id) ) }}" class="btn btn-success btn-sm ms-1 me-1">
+                  <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('employee.show', $employee->id) : (Auth::user()->role->slug === 'administrator' ? route('admin.employee.index', $employee->id) : route('hr.employee.show', $employee->id) ) }}" class="btn btn-success btn-sm ms-1 me-1">
                     <i class="fas fa-eye"></i>
                   </a>
                   <form action="{{ Auth::user()->role->slug === 'super-admin' ? route('employee.destroy', $employee->id) : (Auth::user()->role->slug === 'administrator' ? route('admin.employee.destroy', $employee->id) : route('hr.employee.destroy', $employee->id) ) }}" method="post">

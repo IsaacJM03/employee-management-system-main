@@ -42,8 +42,8 @@
                 <div class="col-6">
                   <select name="status" class="form-control" id="status">
                     <option value="">{{ __('-- Choose Status --') }}</option>
-                    <option value="1" {{ $user->status == 1 ? 'selected' : '' }} >{{ __('Enable') }}</option>
-                    <option value="0" {{ $user->status == 0 ? 'selected' : '' }} >{{ __('Disable') }}</option>
+                    <option value="1" {{ $user->status == 1 ? 'selected' : '' }} >{{ __('Enabled') }}</option>
+                    <option value="0" {{ $user->status == 0 ? 'selected' : '' }} >{{ __('Disabled') }}</option>
                   </select>
                 </div>
               </div>

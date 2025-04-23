@@ -49,9 +49,9 @@
                 </td>
                 <td>
                   @if ($user->status === 1)
-                    <span class="badge bg-success">Enable</span>
+                    <span class="badge bg-success">Enabled</span>
                   @elseif ($user->status === 0)
-                    <span class="badge bg-danger">Disable</span>
+                    <span class="badge bg-danger">Disabled</span>
                   @else
                     <span class="badge bg-secondary">Pending</span>
                   @endif
