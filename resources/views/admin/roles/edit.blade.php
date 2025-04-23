@@ -33,8 +33,8 @@
                 <div class="col-12">
                   <select name="status" class="form-control" id="status">
                     <option value="">{{ __('-- Choose Status --') }}</option>
-                    <option value="1" {{ $role->status == 1 ? 'selected' : '' }} >{{ __('Enable') }}</option>
-                    <option value="0" {{ $role->status == 0 ? 'selected' : '' }} >{{ __('Disable') }}</option>
+                    <option value="1" {{ $role->status == 1 ? 'selected' : '' }} >{{ __('Enabled') }}</option>
+                    <option value="0" {{ $role->status == 0 ? 'selected' : '' }} >{{ __('Disabled') }}</option>
                   </select>
                 </div>
               </div>

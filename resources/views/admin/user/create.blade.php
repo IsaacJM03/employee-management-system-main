@@ -47,8 +47,8 @@
                 <div class="col-6">
                   <select name="status" class="form-control" id="status">
                     <option value="">{{ __('-- Choose Status --') }}</option>
-                    <option value="1">{{ __('Enable') }}</option>
-                    <option value="0">{{ __('Disable') }}</option>
+                    <option value="1">{{ __('Enabled') }}</option>
+                    <option value="0">{{ __('Disabled') }}</option>
                   </select>
                 </div>
               </div>

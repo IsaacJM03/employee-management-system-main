@@ -33,8 +33,8 @@
                   <label for="status">Status</label>
                   <select name="status" class="form-control" id="status">
                     <option value="">{{ __('-- Choose One --') }}</option>
-                    <option value="1" {{ $designation->status == 1 ? 'selected' : '' }}>{{ __('Enable') }}</option>
-                    <option value="0" {{ $designation->status == 0 ? 'selected' : '' }}>{{ __('Disable') }}</option>
+                    <option value="1" {{ $designation->status == 1 ? 'selected' : '' }}>{{ __('Enabled') }}</option>
+                    <option value="0" {{ $designation->status == 0 ? 'selected' : '' }}>{{ __('Disabled') }}</option>
                   </select>
                 </div>
               </div>
