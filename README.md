@@ -30,7 +30,7 @@ The Employee Management System is a comprehensive and user-friendly application 
 
 ## User Interface
 
-![Welcome](public/img/screenshots/Welcome.jpeg "Welcome Page")
+![Welcome](public/img/screenshots/Welcome.png "Welcome Page")
 
 ![Login](public/img/screenshots/Login.jpeg "Login Page")
 

@@ -3,7 +3,7 @@
     <div class="row text-muted">
       <div class="col-6 text-start">
         <p class="mb-0">
-          <a class="text-muted" href="#" target="_blank"><strong>E-RMS</strong></a> &copy;
+          <a class="text-muted" href="#" target="_self"><strong>E-RMS</strong></a> &copy;
           <script>
             document.write(new Date().getFullYear())
           </script>
@@ -12,16 +12,16 @@
       <div class="col-6 text-end">
         <ul class="list-inline">
           <li class="list-inline-item">
-            <a class="text-muted" href="#" target="_blank">Support</a>
+            <a class="text-muted" href="#" target="_self">Support</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-muted" href="#" target="_blank">Help Center</a>
+            <a class="text-muted" href="#" target="_self">Help Center</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-muted" href="#" target="_blank">Privacy</a>
+            <a class="text-muted" href="#" target="_self">Privacy</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-muted" href="#" target="_blank">Terms</a>
+            <a class="text-muted" href="#" target="_self">Terms</a>
           </li>
         </ul>
       </div>
