@@ -20,10 +20,6 @@ The Employee Management System is a comprehensive solution designed to streamlin
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [AdminKit Admin Panel](#adminkit-admin-panel)
-- [Contributors](#contributors)
-- [Want to Contribute](#want-to-contribute)
-- [License](#license)
 
 
 ## Introduction
@@ -178,13 +174,3 @@ php artisan serve
 ```
 
 Congratulations! Employee Management System should now be up and running at `http://localhost:8000`.
-
-
-## AdminKit Admin Panel
-Our Employee Management System incorporates the AdminKit Admin Panel to streamline administrative tasks. AdminKit is a flexible and modern admin dashboard template built with Bootstrap and other front-end technologies. Its customizable components and UI elements enable efficient management of various E-HRMS functionalities.
-
-Get it from here: **[AdminKit](https://adminkit.io/)**
-
-
-## License
-This Employee Management System is distributed under the `GNU General Public License version 3.0 (GPL-3.0)`. You can find the full text of the license in the `LICENSE` file.
