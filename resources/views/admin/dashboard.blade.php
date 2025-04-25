@@ -146,7 +146,7 @@
 	  <div class="card flex-fill w-100">
 		<div class="card-header">
 		  <div class="d-flex align-items-center justify-content-between my- py-0">
-			<h5 class="card-title mb-0">{{ __('Employee DataTable') }}</h5>
+			<h5 class="card-title mb-0">{{ __('Employees') }}</h5>
 			<a href="{{ route('employee.index') }}" class="btn btn-secondary btn-sm my-0">
 			  <i class="fas fa-eye"></i>
 			  <span class="ps-1">{{ __('View') }}</span>

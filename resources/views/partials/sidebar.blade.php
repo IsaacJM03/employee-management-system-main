@@ -29,7 +29,7 @@
       @if (Auth::check() && (Auth::user()->role->slug === 'super-admin'))
        <li class="sidebar-item">
           <a class="sidebar-link" href="{{ route('roles.index') }}">
-            <i class="fas fa-user-shield align-middle"></i> <span class="align-middle">{{ __('User Settings') }}</span>
+            <i class="fas fa-user-shield align-middle"></i> <span class="align-middle">{{ __('Manage Roles') }}</span>
           </a>
         </li> 
       @endif

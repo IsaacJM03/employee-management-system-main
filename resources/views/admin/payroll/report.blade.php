@@ -68,11 +68,11 @@
                 <th scope="col">House rent</th>
                 <th scope="col">Gross Salary</th>
                 {{-- <th scope="col">Overtime</th> --}}
-                <th scope="col">Provident Fund</th>
-                <!-- <th scope="col">Advanced</th> -->
+                <!-- <th scope="col">Provident Fund</th>
+                <th scope="col">Advanced</th>
                 <th scope="col">Tax</th>
                 <th scope="col">Life insurance </th>
-                <th scope="col">Health insurance</th>
+                <th scope="col">Health insurance</th> -->
                 <th scope="col">Deduction</th>
                 <th scope="col">Net Salary</th>
               </tr>
@@ -80,17 +80,16 @@
                 <tbody>
                   @foreach ($salaryData as $data)
                   <tr>
-                    <td>{{ dd($salaryData) }}</td>
                       <td>{{ $data->employee->firstname }}</td>
                       <td>{{ $data->basic }}</td>
                       <td>{{ $data->house_rent }}</td>
                       <td>{{ $data->gross_salary }}</td>
                       <!-- <td>{{ $data->overtime }}</td> -->
-                      <td>{{ $data->provident_fund }}</td>
-                      <!-- <td>{{ $data->advanced }}</td> -->
+                      <!-- <td>{{ $data->provident_fund }}</td>
+                      <td>{{ $data->advanced }}</td>
                       <td>{{ $data->tax }}</td>
                       <td>{{ $data->life_insurance }}</td>
-                      <td>{{ $data->health_insurance }}</td>
+                      <td>{{ $data->health_insurance }}</td> -->
                       <td>{{ $data->deduction }}</td>
                       <td>{{ $data->net_salary }}</td>
                   </tr>
