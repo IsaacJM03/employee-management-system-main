@@ -70,7 +70,7 @@
 				</div>
 			  </div>
 			  <h1 class="mt-3 mb-3">
-				{{ App\Models\Employee::where('status', 1)->count(); }}
+				{{ App\Models\Employee::count(); }}
 			  </h1>
 			</div>
 		  </div>

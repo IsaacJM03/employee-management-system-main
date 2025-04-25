@@ -29,7 +29,7 @@
               <th class="d-none d-xl-table-cell">{{ __('Role Slug') }}</th>
               <th>{{ __('Status') }}</th>
               <th class="d-none d-md-table-cell">{{ __('Date Created') }}</th>
-              <th>{{ __('Action') }}</th>
+              <!-- <th>{{ __('Action') }}</th> -->
             </tr>
           </thead>
           <tbody>
@@ -50,7 +50,7 @@
                   @endif
                 </td>
                 <td class="d-none d-md-table-cell">{{ $role->created_at->diffforhumans() }}</td>
-                <td width="90px">
+                <!-- <td width="90px">
                   <form action="{{ route('roles.destroy', $role->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
@@ -63,7 +63,7 @@
                       <i class="fas fa-trash-alt"></i>
                     </button>
                   </form>
-                </td>
+                </td> -->
               </tr>
             @empty
             <tr>

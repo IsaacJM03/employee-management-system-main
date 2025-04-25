@@ -38,11 +38,11 @@
                 <span class="form-check-label">{{__('Remember me')}}</span>
               </label>
             </div>
-            <div class="col">
+            <!-- <div class="col">
               @if (Route::has('password.request'))
                 <a href="{{ route('password.request') }}">{{__('Forgot password?')}}</a>
               @endif
-            </div>
+            </div> -->
           </div>
           <div class="text-center mt-3">
             <button type="submit" class="btn btn-lg btn-primary">{{ __('Sign in') }}</button>

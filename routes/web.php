@@ -69,9 +69,8 @@ Route::middleware('superadmin')->prefix('super')->group( function () {
     Route::get('/sheet-report', [PayrollController::class, 'sheetReport'])->name('payroll.report');
     Route::post('/generate', [PayrollController::class, 'generateReport'])->name('generate.payroll');
 
-
 });
-Route::middleware('admin')->prefix('admin')->group( function () {
+Route::middleware(['superadmin','admin'])->prefix('admin')->group( function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin.dashboard');
     Route::prefix('department')->group(function() {
         Route::get('/', [DepartmentController::class, 'index'])->name('admin.department.index');

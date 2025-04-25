@@ -110,53 +110,34 @@ class PayrollController extends Controller
     }
 
     public function calculatePayroll(Request $request) {
-        // dd($request);
         if (isset($request->payroll)) {
             foreach ($request->payroll as $employeeId => $payrollData) {
                 // Get the current year and month
                 $currentYear = date('Y');
                 $currentMonth = date('m');
-                
-                // foreach ($payrollData as $year => $yearData) {
-                    // foreach ($yearData as $month => $payrollFields) {
-                        if ($employee = Employee::whereId($employeeId)->first()) {
-                            $data = new Payroll();
-                            $data->employee_id = $employeeId;
-                            
-                            // Use the current year and month for the entry
-                            $data->year = $currentYear;
-                            $data->month = $currentMonth;
-                            
-                            // Process individual payroll fields
-                            // $data->basic = $payrollFields['basic'];
-                            // $data->house_rent = $payrollFields['house_rent'];
-                            // $data->medical = $payrollFields['medical'];
-                            $data->basic = $payrollData['basic'];
-                            $data->house_rent = $payrollData['house_rent'];
-                            // $data->medical = $payrollData['medical'];
-                            // $data->transport = $payrollData['transport'];
-                            // $data->phone_bill = $payrollData['phone_bill'];
-                            // $data->internet_bill = $payrollData['internet_bill'];
-                            // $data->special = $payrollData['special'];
-                            // $data->bonus = $payrollData['bonus'];
-                            $data->days_present = $payrollData['days_present'];
-                            $data->days_absent = $payrollData['days_absent'];
-                            $data->gross_salary = $payrollData['gross_salary'];
-                            $data->provident_fund = $payrollData['provident_fund'];
-                            // $data->advanced = $payrollData['advanced'];
-                            $data->income_tax = $payrollData['income_tax'];
-                            $data->life_insurance = $payrollData['life_insurance'];
-                            $data->health_insurance = $payrollData['health_insurance'];
-                            $data->deduction = $payrollData['deduction'];
-                            $data->net_salary = $payrollData['net_salary'];
-                            // Add more fields as needed
-                            
-                            // Additional salary calculation logic can be added here
-                            
-                            $data->save();
-                        }
-                    // }
-                // }
+
+                // Dynamically update or create payroll records
+                Payroll::updateOrCreate(
+                    [
+                        'employee_id' => $employeeId,
+                        'year' => $currentYear,
+                        'month' => $currentMonth,
+                    ],
+                    [
+                        'basic' => $payrollData['basic'],
+                        'house_rent' => $payrollData['house_rent'],
+                        // 'days_present' => $payrollData['days_present'],
+                        // 'days_absent' => $payrollData['days_absent'],
+                        'gross_salary' => $payrollData['gross_salary'],
+                        'provident_fund' => $payrollData['provident_fund'],
+                        'income_tax' => $payrollData['income_tax'],
+                        'life_insurance' => $payrollData['life_insurance'],
+                        'health_insurance' => $payrollData['health_insurance'],
+                        'deduction' => $payrollData['deduction'],
+                        'net_salary' => $payrollData['net_salary'],
+                        'updated_at' => now(),
+                    ]
+                );
             }
         }
         return back();
@@ -195,6 +176,9 @@ class PayrollController extends Controller
             $salaryData = Payroll::whereIn('employee_id', $employees->pluck('id'))
                 ->where('year', $selectedYear)
                 ->where('month', $selectedMonth)
+                ->orderBy('id', 'desc') // Ensure the latest record is fetched
+                ->distinct('employee_id') // Ensure no duplicate employee records
+                ->with('employee') // Load the employee relationship
                 ->get();
         }
 

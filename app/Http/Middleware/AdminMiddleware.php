@@ -20,11 +20,11 @@ class AdminMiddleware
         }
         
         // Check if the user has the role slug 'super_admin'
-        if ( auth()->user()->role->slug !== 'administrator') {
-            // if ( auth()->user()->role->slug !== 'super-admin') {
+        if ( auth()->user()->role->slug !== 'super-admin') {
+            if ( auth()->user()->role->slug !== 'administrator') {
             abort(403, 'Unauthorized');
         }
-
+    }
         return $next($request);
     }
 }

@@ -58,9 +58,9 @@
                 </td>
                 {{-- <td class="d-none d-md-table-cell">{{ $user->action }}</td> --}}
                 <td width="90px" class="d-flex">
-                  <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('user.edit', $user->id) : route('admin.users.edit', $user->id) }}" class="btn btn-outline-primary btn-sm me-1">
+                  <!-- <a href="{{ Auth::user()->role->slug === 'super-admin' ? route('user.edit', $user->id) : route('admin.users.edit', $user->id) }}" class="btn btn-outline-primary btn-sm me-1">
                     <i class="fas fa-edit"></i>
-                  </a>
+                  </a> -->
                   <form action="{{ Auth::user()->role->slug === 'super-admin' ? route('user.destroy', $user->id) : route('admin.users.destroy', $user->id)}}" method="post">
                     @csrf
                     @method("delete")

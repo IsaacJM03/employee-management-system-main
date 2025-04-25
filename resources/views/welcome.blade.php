@@ -31,9 +31,9 @@
             <a href="{{ url('/dashboard') }}" class="font-semibold text-blue-600 hover:text-blue-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
           @else
             <a href="{{ route('login') }}" class="font-semibold text-blue-600 hover:text-blue-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-            @if (Route::has('register'))
+            <!-- @if (Route::has('register'))
               <a href="{{ route('register') }}" class="ml-4 font-semibold text-blue-600 hover:text-blue-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-            @endif
+            @endif -->
           @endauth
         </div>
       @endif

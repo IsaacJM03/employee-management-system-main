@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -71,15 +72,25 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
-        // $employee = User::findorFail($id);
-        // $employee->update($request->all());
-        // $salary = $employee->salary?: new Salary();
-        // $salary->fill($request->all());
-        // $employee->salary()->save($salary);
-        // return back()->with('success', 'user updated successfully');
-        $user->update($request->all());
-        return back()->with('success', 'User updated successfully');
+        // Validate the request data
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email,' . $user->id, // Allow the current user's email
+            'phone' => 'nullable|string|max:20',
+            'role_id' => 'required|exists:roles,id',
+            'status' => 'required|boolean',
+        ]);
+
+        // Update the user details
+        $user->name = $validatedData['name'];
+        $user->email = $validatedData['email'];
+        $user->phone = $validatedData['phone'];
+        $user->role_id = $validatedData['role_id'];
+        $user->status = $validatedData['status'];
+        $user->save();
+
+        // Redirect to the index page with a success message
+        return redirect()->route('admin.users.index')->with('success', 'User updated successfully');
     }
 
     /**

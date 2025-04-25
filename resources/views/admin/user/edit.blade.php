@@ -31,6 +31,9 @@
                   <input type="tel" name="phone" class="form-control" id="phone" placeholder="{{ __('Primary Phone') }}" value="{{ $user->phone }}" required oninput="formatPhoneNumber(this)" maxlength="19" />
                   {{-- <input type="text" name="phone" class="form-control" id="title" placeholder="{{ __('phone') }}" value="{{ $user->phone }}" required /> --}}
                 </div>
+                <div class="col-12">
+                  <input type="password" name="password" class="form-control" id="title" placeholder="{{ __('Password') }}" value="{{ $user->password }}" />
+                </div>
                 <div class="col-6">
                   <select name="role_id" class="form-control" id="role">
                     <option value="">{{ __('-- User Role --') }}</option>

@@ -26,7 +26,7 @@
             <thead>
               <tr>
                 <th scope="col" width="200px">{{ __('Employee Name') }}</th>
-                <th scope="col">{{ __('Designation') }}</th>
+                <!-- <th scope="col">{{ __('Designation') }}</th> -->
                 <th scope="col">{{ __('Basic Salary') }}</th>
                 <th scope="col">{{ __('House Rent') }}</th>
                 <!-- <th scope="col">{{ __('Medical') }}</th>
@@ -35,8 +35,8 @@
                 <th scope="col">{{ __('Internet') }}</th>
                 <th scope="col">{{ __('Special') }}</th>
                 <th scope="col">{{ __('Bonus') }}</th> -->
-                <th scope="col">{{ __('Present') }}</th>
-                <th scope="col">{{ __('Absent') }}</th>
+                <!-- <th scope="col">{{ __('Present') }}</th>
+                <th scope="col">{{ __('Absent') }}</th> -->
                 <th scope="col">{{ __('Gross Salary') }}</th>
                 {{-- <th scope="col">Overtime</th> --}}
                 <th scope="col">{{ __('Provident Fund') }}</th>
@@ -63,7 +63,7 @@
                     <td width="200px" class="py-0" >
                       <span style="width: 200px;">{{ $employee->firstname }} {{ $employee->lastname }}</span>
                     </td>
-                    <td>{{ $employee->designation->title }}</td>  
+                    <!-- <td>{{ $employee->designation->title }}</td>   -->
                     <td width="">
                       <input type="number" name="payroll[{{ $employee->id }}][basic]" class="form-control basic" id="" value="{{ isset($employee->salary->basic) ? $employee->salary->basic : 0 }}" style="width: 100px" >
                     </td>
@@ -88,21 +88,21 @@
                     <td width="">
                         <input type="number" name="payroll[{{ $employee->id }}][bonus]" class="form-control bonus" id="" value="{{ isset($employee->salary->bonus) ? $employee->salary->bonus : 0 }}" style="width: 100px" >
                     </td> -->
-                    <td width="">
+                    <!-- <td width="">
                       @php
                         $present = App\Models\Attendance::where('employee_id', $employee->id)->where('status', 1)->count()
                       @endphp
-                      <input type="number" name="payroll[{{ $employee->id }}][days_present]" class="form-control present" id="" value="{{ isset($present) ? $present : 0 }}" readonly style="width: 100px" >
-                    </td>
-                    <td width="">
+                      <input type="number" name="payroll[{{ $employee->id }}][days_present]" class="form-control present" id="" value="{{ isset($present) ? $present : 0 }}" readonly style="width: 100px" > -->
+                    <!-- </td> -->
+                    <!-- <td width="">
                       @php
                         $today = today();
                         $absent = $today->daysInMonth - $present
                       @endphp
                       <input type="number" name="payroll[{{ $employee->id }}][days_absent]" class="form-control absent" id="" value="{{ isset($absent) ? $absent : 0 }}" readonly style="width: 100px" >
-                    </td>
+                    </td> -->
                     <td width="">
-                      <input type="number" name="payroll[{{ $employee->id }}][gross_salary]" class="form-control gross" id="" value="" readonly style="width: 100px">
+                      <input type="number" name="payroll[{{ $employee->id }}][gross_salary]" class="form-control gross" id="" value="{{ isset($employee->salary->gross_salary) ? $employee->salary->gross_salary : 0 }}" readonly style="width: 100px">
                     </td>  
                     {{-- <td width="">
                       <input type="number" name="payroll[{{ $employee->id }}][{{ $year }}][{{ $month }}][overtime_pay]" class="form-control" id="" value="{{ $employee->salary->overtime_pay }}" readonly>

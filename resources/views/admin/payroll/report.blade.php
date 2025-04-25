@@ -64,15 +64,8 @@
             <thead>
               <tr>
                 <th scope="col" width="200px">{{ __('Employee Name') }}</th>
-                <th scope="col">{{ __('Employee Position') }}</th>
                 <th scope="col">Basic Salary</th>
                 <th scope="col">House rent</th>
-                <!-- <th scope="col">Medical Allowance</th> -->
-                <!-- <th scope="col">Transport Allowance</th> -->
-                <!-- <th scope="col">special Allowance</th>
-                <th scope="col">Bonus</th> -->
-                <th scope="col">Present</th>
-                <th scope="col">Absent</th>
                 <th scope="col">Gross Salary</th>
                 {{-- <th scope="col">Overtime</th> --}}
                 <th scope="col">Provident Fund</th>
@@ -87,16 +80,11 @@
                 <tbody>
                   @foreach ($salaryData as $data)
                   <tr>
+                    <td>{{ dd($salaryData) }}</td>
                       <td>{{ $data->employee->firstname }}</td>
                       <td>{{ $data->basic }}</td>
                       <td>{{ $data->house_rent }}</td>
-                      <!-- <td>{{ $data->medical }}</td> -->
-                      <!-- <td>{{ $data->transport }}</td>
-                      <td>{{ $data->special }}</td>
-                      <td>{{ $data->bonus }}</td> -->
-                      <td>{{ $data->present }}</td>
-                      <td>{{ $data->absent }}</td>
-                      <td>{{ $data->gross }}</td>
+                      <td>{{ $data->gross_salary }}</td>
                       <!-- <td>{{ $data->overtime }}</td> -->
                       <td>{{ $data->provident_fund }}</td>
                       <!-- <td>{{ $data->advanced }}</td> -->
@@ -146,9 +134,10 @@
           //   (basic.val() / 30) * absent;
           // }
 
-          var grossSalary = basic + rent + medical + transport + special + bonus;
-          var deductSalary = pf + advance + tax + life + health;
+          var grossSalary = basic + rent;
+          var deductSalary = tax + life + health;
           var netSalary = grossSalary - deductSalary;
+
           
           $employee.find(".gross").val(grossSalary.toFixed(2));
           $employee.find(".deduct").val(deductSalary.toFixed(2));
